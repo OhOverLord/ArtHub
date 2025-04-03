@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    restart: always
+    container_name: arthub_backend_database
+    environment:
+      - POSTGRES_USER=arthub_backend
+      - POSTGRES_PASSWORD=arthub_backend
+      - POSTGRES_DB=arthub_backend
+    ports:
+      - '5432:5432'
+    networks:
+      - "my-net"
+
+  elastic-service:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.7.1
+    restart: always
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"
+    networks:
+      - "my-net"
+networks:
+  my-net:
+    driver: bridge

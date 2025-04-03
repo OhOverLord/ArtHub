@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    restart: always
+    container_name: arthub_backend_database
+    environment:
+      - POSTGRES_USER=arthub_backend
+      - POSTGRES_PASSWORD=arthub_backend
+      - POSTGRES_DB=arthub_backend
+    ports:
+      - '5432:5432'
+    networks:
+      - backend_network
+
+  elastic-service:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.7.1
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - SPRING_ELASTICSEARCH_USERNAME=arthub_backend
+      - SPRING_ELASTICSEARCH_PASSWORD=arthub_backend
+    ports:
+      - "9200:9200"
+    networks:
+      - backend_network
+    restart: always
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:9200" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend_server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - RUNNING_IN_DOCKER=true
+      - SPRING_PROFILES_ACTIVE=local
+    container_name: arthub_backend_server
+    ports:
+      - '8082:8080'
+    depends_on:
+      postgres:
+        condition: service_started
+      elastic-service:
+        condition: service_healthy
+    networks:
+      - backend_network
+    env_file:
+      - .env
+
+networks:
+  backend_network:
+    driver: bridge

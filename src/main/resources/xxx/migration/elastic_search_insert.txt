@@ -1,0 +1,47 @@
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/1" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 1, \"title\": \"Witch's Swamp Hut\", \"description\": \"An eerie, mist-covered swamp with an old wooden hut elevated on stilts.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/2" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 2, \"title\": \"Peaceful Countryside Farm\", \"description\": \"A charming rustic farmhouse set in a lush, green landscape, surrounded by gentle hills and grazing sheep.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/3" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 3, \"title\": \"High-Speed Racer\", \"description\": \"A sleek, futuristic race car with vibrant orange and blue accents, designed for high-speed performance.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/4" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 4, \"title\": \"Guts Facing Darkness\", \"description\": \"A powerful monochromatic illustration from the Berserk manga, depicting Guts standing resolute against an ominous, otherworldly void.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/5" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 5, \"title\": \"Berserk Brand of Sacrifice\", \"description\": \"The haunting Brand of Sacrifice from the Berserk series, a mark that signifies a person’s fate as a sacrifice.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/6" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 6, \"title\": \"Wanderers in the Mist\", \"description\": \"A group of mysterious, hooded figures slowly makes their way through a foggy, desolate landscape.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/7" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 7, \"title\": \"Call of Cthulhu\", \"description\": \"A lone figure faces the colossal form of Cthulhu, emerging from the ocean depths with glowing red eyes and massive tentacles.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/8" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 8, \"title\": \"Grumpy Cat\", \"description\": \"An illustration of the iconic Grumpy Cat, with a trademark unimpressed expression.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/9" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 9, \"title\": \"The Abyss\", \"description\": \"A solitary figure clings to the edge of a rocky precipice, gazing down into a vast, mysterious void.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/10" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 10, \"title\": \"Lone Streetlight\", \"description\": \"A single streetlight illuminates an empty, snow-covered street in the dead of night. The quiet, dark atmosphere conveys a sense of isolation and calm amidst the cold.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/11" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 11, \"title\": \"Makima\", \"description\": \"The ominous atmosphere hints at hidden power and control.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/12" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 12, \"title\": \"Nyan Cat in Space\", \"description\": \"An adorable, iconic Nyan Cat with a pop-tart body soaring through space, leaving a trail of rainbow colors behind.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/13" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 13, \"title\": \"Courage's Haunted House\", \"description\": \"The lonely house of Courage the Cowardly Dog, standing isolated under a vast, starry sky with a windmill creaking in the background.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/14" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 14, \"title\": \"Samurai Cat Warrior\", \"description\": \"A fierce-looking cat with intricate tattoos and a katana in its mouth, exuding the spirit of a samurai.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/15" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 15, \"title\": \"Wanderer at Dusk\", \"description\": \"A lone samurai stands on a mountain ridge at dusk, silhouetted against a red-tinted sky.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/16" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 16, \"title\": \"Majestic British Shorthair\", \"description\": \"A calm and curious British Shorthair cat, resting on the floor with its iconic round face and plush gray fur.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/17" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 17, \"title\": \"The Last Stand\", \"description\": \"A lone skeleton stands tall on a pile of skulls, silhouetted against a deep blue sky. The surreal and haunting scene evokes a sense of desolation and eternal solitude.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/18" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 18, \"title\": \"Contemplation at Dusk\", \"description\": \"A silhouette of a girl sitting by the window, smoking as the sun sets over the city skyline.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/19" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 19, \"title\": \"Curious Snow Leopard Cub\", \"description\": \"An adorable young snow leopard exploring the forest, its fur blending seamlessly with the autumn leaves.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/20" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 20, \"title\": \"Stranded Rocket\", \"description\": \"A lone astronaut stands next to a massive, futuristic rocket on a desolate desert-like planet.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/21" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 21, \"title\": \"The Invincible Explorer\", \"description\": \"An astronaut's helmet submerged in desert sands, with a giant planet looming in the red sky above.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/22" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 22, \"title\": \"Curious Trio\", \"description\": \"Three adorable bears peeking into a hollow log, each with a unique expression of curiosity and wonder.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/23" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 23, \"title\": \"Winter's Warmth\", \"description\": \"A girl sits by a cozy campfire under the mesmerizing northern lights, savoring a moment of solitude in the snowy wilderness.\"}"
+
+curl -X POST "http://elasticsearch-kindiole-dev.apps.sandbox-m3.1530.p1.openshiftapps.com/feed/_doc/24" -H "Content-Type: application/json" -d "{\"_class\": \"org.arthub.backend.Entity.PostElasticsearch\", \"postId\": 24, \"title\": \"Snowy Train Station\", \"description\": \"A lone train waits at a quiet, snow-covered station surrounded by winter trees. Footprints in the snow tell a silent story of fleeting journeys.\"}"

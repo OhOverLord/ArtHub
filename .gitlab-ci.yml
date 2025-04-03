@@ -1,0 +1,69 @@
+image: gradle:8.2.0-jdk17-jammy
+
+variables:
+  SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  # Defines the location of the analysis task cache
+  GIT_DEPTH: "0"  # Tells git to fetch all the branches of the project, required by the analysis task
+
+stages:
+  - check
+  - build
+  - test
+  - dependency-check
+  - sonarqube-check
+
+checkstyle:
+  stage: check
+  image: gradle:jdk17
+  script:
+    - ./gradlew checkstyleMain
+  allow_failure: false
+
+build_job:
+  stage: build
+  services:
+    - docker:dind
+  image: eclipse-temurin:17-alpine
+  variables:
+    DOCKER_HOST: "tcp://docker:2375"
+    DOCKER_TLS_CERTDIR: ""
+  script:
+    - chmod +x gradlew
+    - ./gradlew build
+
+test_job:
+  stage: test
+  services:
+    - docker:dind
+  image: eclipse-temurin:17-alpine
+  variables:
+    DOCKER_HOST: "tcp://docker:2375"
+    DOCKER_TLS_CERTDIR: ""
+  script:
+    - chmod +x gradlew
+    - ./gradlew test
+
+dependency_check:
+  stage: dependency-check
+  script:
+    - chmod +x gradlew
+    - ./gradlew dependencyCheckAnalyze
+  artifacts:
+    paths:
+      - build/reports/dependency-check/dependency-check-report.html
+    expire_in: 3 day
+
+sonarqube-check:
+  stage: sonarqube-check
+  services:
+    - docker:dind
+  variables:
+    DOCKER_HOST: "tcp://docker:2375"
+    DOCKER_TLS_CERTDIR: ""
+  script:
+    - chmod +x gradlew
+    - ./gradlew build
+    - ./gradlew test
+    - ./gradlew sonar -Dsonar.java.binaries=build/classes/java/main -Dsonar.dependencyCheck.reportPath=build/reports/dependency-check/dependency-check-report.html
+  allow_failure: true
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH == "master" || $CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "dev"'
